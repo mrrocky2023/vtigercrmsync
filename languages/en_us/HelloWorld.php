@@ -1,6 +1,6 @@
 <?php
 
 $languageStrings = array(
-        'Hello World' => 'Hello World!',
+        'Sync' => 'Sync',
         'LBL_WELCOME' => 'A very warm welcome to you'
 );
