@@ -2,7 +2,7 @@
 ini_set('display_errors','1'); 
 require_once('include/database/PearDatabase.php');
 
-class HelloWorld_List_View extends Vtiger_Index_View {
+class Sync_List_View extends Vtiger_Index_View {
 
         public function process(Vtiger_Request $request) {
 		$db = PearDatabase::getInstance();
