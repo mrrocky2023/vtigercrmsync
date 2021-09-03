@@ -1,8 +1,8 @@
 <?xml version='1.0'?>
 <module>
   <exporttime>2021-09-03 14:57:58</exporttime>
-  <name>HelloWorld</name>
-  <label>Hello World</label>
+  <name>Sync</name>
+  <label>VtigerCMR Sync</label>
   <parent>Tools</parent>
   <type>extension</type>
   <version>1.0</version>
