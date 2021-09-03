@@ -1,2 +1,2 @@
 <?php
-class HelloWorld {}
+class Sync {}
