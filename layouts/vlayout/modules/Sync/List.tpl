@@ -1,4 +1,4 @@
-<h1>{'VTigerCRM Sync'|vtranslate:$MODULE}</h1>
+<h1>{'VTigerCRM Sync!'|vtranslate:$MODULE}</h1>
 /*
 <form action="index.php?module=Sync&view=List" method="post">
 	<textarea name="contentSave" rows="100" cols="40">{$CONTENTS}</textarea>
