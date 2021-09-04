@@ -1,10 +1,13 @@
 <h1>{'VTigerCRM Sync'|vtranslate:$MODULE}</h1>
+/*
 <form action="index.php?module=Sync&view=List" method="post">
 	<textarea name="contentSave" rows="100" cols="40">{$CONTENTS}</textarea>
 	<button type="submit" name="form" value="A">Save</button>
 </form>
+*/
 <form action="index.php?module=Sync&view=List" method="post">
-	<textarea name="strQueryClient" rows="10" cols="40">{$OUTPUT}</textarea>
+	//<textarea name="strQueryClient" rows="10" cols="40">{$OUTPUT}</textarea>
+	<textarea name="strQueryClient" rows="10" cols="40"></textarea>
 	<button type="submit" name="form" value="B">Execute</button>
 </form>
 <h1>{$COMPLETE}</h1>
