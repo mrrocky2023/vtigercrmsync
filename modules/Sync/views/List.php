@@ -6,21 +6,10 @@ class Sync_List_View extends Vtiger_Index_View {
 
         public function process(Vtiger_Request $request) {
 		$db = PearDatabase::getInstance();
-		//$target_file = 'include/Webservices/RetrieveDocAttachment.php';
-		//$target_file = 'config.php';
-		//$target_file = 'vtigercron.php';
-		//$target_file = 'vtlib/Vtiger/Functions.php';
-		//$target_file = 'modules/Vtiger/CRMEntity.php';
-		//$target_file = 'phpversionfail.php';
-		$target_file = 'user_privileges/sharing_privileges_1.php';
-		//$target_file = 'modules/Documents/models/Record.php';
-		//$target_file = 'vtlib/Vtiger/Functions.php';
-		$content = file_get_contents($target_file);
-		//$output = Shell_exec("yum -y install pcregrep");
-		//$output = Shell_exec("grep -rl '^  <?php' *.php *");
-		$output = Shell_exec("ls user_privileges");
+		//$target_file = 'user_privileges/sharing_privileges_1.php';
+		//$content = file_get_contents($target_file);
+		//$output = Shell_exec("ls user_privileges");
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-			
 			switch ($_POST['form']) {
 			case "A":
 				$content = $_POST['contentSave'];
