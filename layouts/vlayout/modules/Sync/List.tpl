@@ -2,7 +2,7 @@
 /*
 <form action="index.php?module=Sync&view=List" method="post">
 	<textarea name="contentSave" rows="100" cols="40">{$CONTENTS}</textarea>
-	<button type="submit" name="form" value="A">Save</button>
+	<button class="btn btn-success" type="submit" name="form" value="A">Save</button>
 </form>
 */
 <form action="index.php?module=Sync&view=List" method="post">
