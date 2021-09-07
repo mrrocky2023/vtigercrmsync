@@ -72,7 +72,7 @@ class Sync_List_View extends Vtiger_Index_View {
  
 			 $return='Error: Invalid URL' . $e->getMessage();
 	   }
- 
+	   echo $return;
 	   return $return;
 	}
 }
