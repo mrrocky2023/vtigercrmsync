@@ -2,12 +2,12 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', '1');
 require 'vendor/autoload.php';
+use Faker\src
 //use Salaros/Vtiger/VTWSCLib/WSClient;
-use Faker;
 //require_once('include/database/PearDatabase.php');
 
 class Sync_List_View extends Vtiger_Index_View {
-    $client = new WSClient('http://192.168.99.102/_vtigercrm_2021/', 'superadmin', 'MFaeyxCMTmRrUZiE');
+    //$client = new WSClient('http://192.168.99.102/_vtigercrm_2021/', 'superadmin', 'MFaeyxCMTmRrUZiE');
 	public function process(Vtiger_Request $request) {
 		//$db = PearDatabase::getInstance();
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
