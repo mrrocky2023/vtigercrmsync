@@ -4,7 +4,10 @@
 	</div>
 	<div class="detailViewInfo row-fluid">
 		<form action="index.php?module=Sync&view=List" method="post">
-			<button class="btn btn-info btn-xmini removeMember" type="submit" name="form" value="A">Sync Up</button>
+			//<textarea name="strQueryClient" rows="10" cols="40"></textarea>
+			<button class="btn btn-info btn-xmini removeMember" type="submit" name="form" value="B">Sync Up</button>
+			<br>
+			<h1>{$VAR}</h1>
 		</form>
 	</div>
 </div>
