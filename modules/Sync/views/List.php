@@ -1,6 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+ini_set('display_errors', 'on');
+ini_set('display_startup_errors', 'on');
 error_reporting(E_ALL);
 require 'vendor/autoload.php';
 require_once('include/database/PearDatabase.php');
@@ -13,7 +13,7 @@ class Sync_List_View extends Vtiger_Index_View {
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			switch ($_POST['form']) {
 				case "A":
-                    $client = new WSClient('http://192.168.99.102/_vtigercrm_2021/webservice.php', 'superadmin', '<MFaeyxCMTmRrUZiE>');
+                    $client = new WSClient('http://192.168.99.102/_vtigercrm_2021/webservice.php', 'superadmin', 'MFaeyxCMTmRrUZiE');
                     $var = $client->modules->getOne('Contacts'));
 					break;
 			}
