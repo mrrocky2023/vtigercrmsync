@@ -12,7 +12,7 @@ class Sync_List_View extends Vtiger_Index_View {
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			switch ($_POST['form']) {
 				case "A":
-                    $var = $client->entities->findOne('Contacts', [
+                    $Contact = $client->entities->findOne('Contacts', [
                         'firstname'             => 'HAYDEE',
                         'lastname'              => 'VILLARREAL',
                     ], [
@@ -28,6 +28,7 @@ class Sync_List_View extends Vtiger_Index_View {
                     } else {
                         echo('John Smith\'s record doesn\'t exists!' . PHP_EOL);
                     }
+                    $var = $Contact[id]
 					break;
 			}
 		} else {
