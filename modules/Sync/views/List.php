@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+//error_reporting(E_ALL);
+//ini_set('display_errors', '1');
 require 'vendor/autoload.php';
 use Salaros\Vtiger\VTWSCLib\WSClient;
 //require_once('include/database/PearDatabase.php');
@@ -31,8 +31,8 @@ class Sync_List_View extends Vtiger_Index_View {
                     }
                     $var = $Contact[id]
                     */
-                    //$faker = Faker\Factory::create();
-                    $var = '$faker->name';
+                    $faker = Faker\Factory::create();
+                    $var = $faker->name;
 					break;
 			}
 		} else {
