@@ -2,19 +2,34 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', '1');
 require 'vendor/autoload.php';
-use Faker\src
-//use Salaros/Vtiger/VTWSCLib/WSClient;
 //require_once('include/database/PearDatabase.php');
+use Salaros\Vtiger\VTWSCLib\WSClient;
+$client = new WSClient('http://192.168.99.102/_vtigercrm_2021/', 'superadmin', 'MFaeyxCMTmRrUZiE');
+$Contact = $client->entities->findOne('Contacts', [
+    'firstname'             => 'HAYDEE',
+    'lastname'              => 'VILLARREAL',
+], [
+    'id',
+    'salutationtype',
+    'firstname',
+    'lastname',
+    'email',
+    'phone'
+]);
+if (false !== $var) {
+    print_r($var);
+} else {
+    echo('John Smith\'s record doesn\'t exists!' . PHP_EOL);
+}
 
 class Sync_List_View extends Vtiger_Index_View {
-    //$client = new WSClient('http://192.168.99.102/_vtigercrm_2021/', 'superadmin', 'MFaeyxCMTmRrUZiE');
 	public function process(Vtiger_Request $request) {
 		//$db = PearDatabase::getInstance();
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			switch ($_POST['form']) {
 				case "A":
                     /*
-                    $Contact = $client->entities->findOne('Contacts', [
+                    $Contact = this->client->entities->findOne('Contacts', [
                         'firstname'             => 'HAYDEE',
                         'lastname'              => 'VILLARREAL',
                     ], [
@@ -30,14 +45,13 @@ class Sync_List_View extends Vtiger_Index_View {
                     } else {
                         echo('John Smith\'s record doesn\'t exists!' . PHP_EOL);
                     }
-                    $var = $Contact[id]
+                    $var = $Contact[id];
                     */
-                    $faker = Factory::create();
-                    $var = $faker->name;
 					break;
 			}
 		} else {
-			$var = 'Waiting for Sync!';
+			#$var = 'Waiting for Sync!';
+            $var = $Contact[id];
 		}
 		/*
 		$records = array();
