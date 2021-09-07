@@ -8,13 +8,13 @@ class Sync_List_View extends Vtiger_Index_View {
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			switch ($_POST['form']) {
 				case "A":
-					protected $AccessKey='MFaeyxCMTmRrUZiE';
-					protected $User='superadmin';
-					protected $URL='http://192.168.99.102/_vtigercrm_2021/webservice.php?';
-					protected $Token='';
-					protected $param=array("operation" => "getchallenge", "username" => $User);
-      				$result=$this->curl_execution($URL,$param,$type = "GET");
-					$var = $result;
+					$AccessKey='MFaeyxCMTmRrUZiE';
+					$User='superadmin';
+					$URL='http://192.168.99.102/_vtigercrm_2021/webservice.php?';
+					$Token='';
+					$param=array("operation" => "getchallenge", "username" => $User);
+      				//$result=$this->curl_execution($URL,$param,$type = "GET");
+					$var = "result";
 					break;
 			}
 		} else {
