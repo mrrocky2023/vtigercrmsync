@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-require 'vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 use Salaros\Vtiger\VTWSCLib\WSClient;
 //require_once('include/database/PearDatabase.php');
 
@@ -12,6 +12,7 @@ class Sync_List_View extends Vtiger_Index_View {
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			switch ($_POST['form']) {
 				case "A":
+                    /*
                     $Contact = $client->entities->findOne('Contacts', [
                         'firstname'             => 'HAYDEE',
                         'lastname'              => 'VILLARREAL',
@@ -29,6 +30,9 @@ class Sync_List_View extends Vtiger_Index_View {
                         echo('John Smith\'s record doesn\'t exists!' . PHP_EOL);
                     }
                     $var = $Contact[id]
+                    */
+                    $faker = Faker\Factory::create();
+                    $var = $faker->name;
 					break;
 			}
 		} else {
