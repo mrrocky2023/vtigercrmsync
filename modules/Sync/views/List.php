@@ -58,7 +58,7 @@ class Sync_List_View extends Vtiger_Index_View {
 					$Token='';
 					$param=array("operation" => "getchallenge", "username" => $User);
       				$result=$this->curl_execution($url,$param,$type = "GET");
-					$var = $result;
+					$var = $result['result']['token'];
 					break;
 			}
 		} else {
@@ -72,7 +72,7 @@ class Sync_List_View extends Vtiger_Index_View {
 		}
 		*/
        	$viewer = $this->getViewer($request);
-       	$viewer->assign('VAR', $var['result']['token']);
+       	$viewer->assign('VAR', $var);
 		$viewer->view('List.tpl', $request->getModule());
     }
 }
