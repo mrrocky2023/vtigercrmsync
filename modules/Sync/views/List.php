@@ -14,7 +14,7 @@ class Sync_List_View extends Vtiger_Index_View {
 					$Token='';
 					$param=array("operation" => "getchallenge", "username" => $User);
       				$result=$this->curl_execution($URL,$param,$type = "GET");
-					$var = "result";
+					$var = $result;
 					break;
 			}
 		} else {
