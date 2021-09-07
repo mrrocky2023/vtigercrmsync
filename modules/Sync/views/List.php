@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-require_once __DIR__ . '/../vendor/autoload.php';
+require 'vendor/autoload.php';
 use Salaros\Vtiger\VTWSCLib\WSClient;
 //require_once('include/database/PearDatabase.php');
 
