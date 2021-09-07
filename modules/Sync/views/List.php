@@ -3,13 +3,13 @@ ini_set('display_errors', 'on');
 ini_set('display_startup_errors', 'on');
 error_reporting(E_ALL);
 require 'vendor/autoload.php';
-require_once('include/database/PearDatabase.php');
+//require_once('include/database/PearDatabase.php');
 
 use Salaros\Vtiger\VTWSCLib\WSClient;
 
 class Sync_List_View extends Vtiger_Index_View {
 	public function process(Vtiger_Request $request) {
-		$db = PearDatabase::getInstance();
+		//$db = PearDatabase::getInstance();
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			switch ($_POST['form']) {
 				case "A":
