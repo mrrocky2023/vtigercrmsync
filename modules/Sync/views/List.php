@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 require 'vendor/autoload.php';
 //require_once('include/database/PearDatabase.php');
 
-use Salaros\Vtiger\VTWSCLib\WSClient;
+use salaros\vtwsclib-php\src\WSClient;
 
 class Sync_List_View extends Vtiger_Index_View {
 	public function process(Vtiger_Request $request) {
