@@ -72,7 +72,7 @@ class Sync_List_View extends Vtiger_Index_View {
 		}
 		*/
        	$viewer = $this->getViewer($request);
-       	$viewer->assign('VAR', $var);
+       	$viewer->assign('VAR', $var['result']['token']);
 		$viewer->view('List.tpl', $request->getModule());
     }
 }
