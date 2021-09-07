@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 require 'vendor/autoload.php';
 //require_once('include/database/PearDatabase.php');
 
-use salaros\vtwsclib-php\src\WSClient;
+use Salaros\Vtiger\VTWSCLib\WSClient;
 
 class Sync_List_View extends Vtiger_Index_View {
 	public function process(Vtiger_Request $request) {
@@ -14,7 +14,7 @@ class Sync_List_View extends Vtiger_Index_View {
 			switch ($_POST['form']) {
 				case "A":
                     $client = new WSClient('http://192.168.99.102/_vtigercrm_2021/webservice.php', 'superadmin', 'MFaeyxCMTmRrUZiE');
-                    $var = $client->modules->getOne('Contacts'));
+                    //$var = $client->modules->getOne('Contacts'));
 					break;
 			}
 		} else {
