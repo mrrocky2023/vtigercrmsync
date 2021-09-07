@@ -12,12 +12,10 @@ class Sync_List_View extends Vtiger_Index_View {
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			switch ($_POST['form']) {
 			case "A":
-				$content = $_POST['contentSave'];
-				file_put_contents($target_file, $content);
-			    	break;
+				echo 'Sync Now!';
 			case "B":
-			    	$strQuery = $_POST['strQueryClient'];
-			    	break;
+			    $strQuery = $_POST['strQueryClient'];
+			    break;
 			}
 		} else {
 			$strQuery = "SELECT vtiger_contactdetails.firstname, vtiger_contactdetails.lastname,vtiger_attachments.attachmentsid,vtiger_notes.notesid,path,filename,filesize,filetype,name FROM vtiger_attachments INNER JOIN vtiger_seattachmentsrel ON vtiger_seattachmentsrel.attachmentsid = vtiger_attachments.attachmentsid INNER JOIN vtiger_notes ON vtiger_notes.notesid = vtiger_seattachmentsrel.crmid inner join vtiger_senotesrel on vtiger_senotesrel.notesid= vtiger_notes.notesid inner join vtiger_contactdetails on vtiger_senotesrel.crmid = vtiger_contactdetails.contactid limit 0,10";
