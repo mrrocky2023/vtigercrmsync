@@ -1,20 +1,18 @@
 <?php
-ini_set('display_errors', 'on');
-ini_set('display_startup_errors', 'on');
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 require 'vendor/autoload.php';
+use Salaros\Vtiger\VTWSCLib\WSClient;
 //require_once('include/database/PearDatabase.php');
 
-use Salaros\Vtiger\VTWSCLib\WSClient;
-
 class Sync_List_View extends Vtiger_Index_View {
+    $client = new WSClient('http://192.168.99.102/_vtigercrm_2021/', 'superadmin', 'MFaeyxCMTmRrUZiE');
 	public function process(Vtiger_Request $request) {
 		//$db = PearDatabase::getInstance();
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			switch ($_POST['form']) {
 				case "A":
-                    $client = new WSClient('http://192.168.99.102/_vtigercrm_2021/', 'superadmin', 'MFaeyxCMTmRrUZiE');
-                    $var = $client
-                    //$var = $client->modules->getOne('Contacts'));
+                    $var = $this->client->modules->getOne('Contacts'));
 					break;
 			}
 		} else {
