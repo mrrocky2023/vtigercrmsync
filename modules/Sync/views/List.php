@@ -13,6 +13,7 @@ class Sync_List_View extends Vtiger_Index_View {
 			switch ($_POST['form']) {
 				case "A":
                     $client = new WSClient('http://192.168.99.102/_vtigercrm_2021/webservice.php', 'superadmin', 'MFaeyxCMTmRrUZiE');
+                    $var = $client
                     //$var = $client->modules->getOne('Contacts'));
 					break;
 			}
