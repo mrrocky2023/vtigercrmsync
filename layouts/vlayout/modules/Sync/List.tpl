@@ -4,10 +4,10 @@
 	</div>
 	<div class="detailViewInfo row-fluid">
 		<form action="index.php?module=Sync&view=List" method="post">
-			<textarea name="strQueryClient" rows="10" cols="40"></textarea>
-			<button class="btn btn-info btn-xmini removeMember" type="submit" name="form" value="B">Execute</button>
+			/*<textarea name="strQueryClient" rows="10" cols="40"></textarea>*/
+			<button class="btn btn-info btn-xmini removeMember" type="submit" name="form" value="B">Sync Up</button>
 		</form>
-
+	/*
 		<h1>{$COMPLETE}</h1>
 			<table cellpadding="0" cellspacing="0" width="100%" rules="none">
 				{foreach item=RECORD from=$RECORDS}
@@ -22,5 +22,6 @@
 					</tr>
 				{/foreach}
 			</table>
+	*/
 	</div>
 </div>
