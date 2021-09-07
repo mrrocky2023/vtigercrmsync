@@ -31,8 +31,8 @@ class Sync_List_View extends Vtiger_Index_View {
                     }
                     $var = $Contact[id]
                     */
-                    $faker = Faker\Factory::create();
-                    $var = $faker->name;
+                    //$faker = Faker\Factory::create();
+                    $var = '$faker->name';
 					break;
 			}
 		} else {
