@@ -5,22 +5,6 @@ require 'vendor/autoload.php';
 //require_once('include/database/PearDatabase.php');
 use Salaros\Vtiger\VTWSCLib\WSClient;
 $client = new WSClient('http://192.168.99.102/_vtigercrm_2021/', 'superadmin', 'MFaeyxCMTmRrUZiE');
-$Contact = $client->entities->findOne('Contacts', [
-    'firstname'             => 'HAYDEE',
-    'lastname'              => 'VILLARREAL',
-], [
-    'id',
-    'salutationtype',
-    'firstname',
-    'lastname',
-    'email',
-    'phone'
-]);
-if (false !== $var) {
-    print_r($var);
-} else {
-    echo('John Smith\'s record doesn\'t exists!' . PHP_EOL);
-}
 
 class Sync_List_View extends Vtiger_Index_View {
 	public function process(Vtiger_Request $request) {
@@ -51,7 +35,7 @@ class Sync_List_View extends Vtiger_Index_View {
 			}
 		} else {
 			#$var = 'Waiting for Sync!';
-            $var = $Contact[id];
+            $var = '$Contact[id]';
 		}
 		/*
 		$records = array();
