@@ -54,7 +54,7 @@ class Sync_List_View extends Vtiger_Index_View {
 				case "A":
 					$AccessKey='MFaeyxCMTmRrUZiE';
 					$User='superadmin';
-					$url='http://192.168.99.102/_vtigercrm_2021/webservice.php?';
+					$url='http://192.168.99.102/_vtigercrm_2021/webservice.php';
 					$Token='';
 					$param=array("operation" => "getchallenge", "username" => $User);
       				$result=$this->curl_execution($url,$param,$type = "GET");
