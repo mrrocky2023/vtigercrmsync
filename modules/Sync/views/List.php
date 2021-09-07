@@ -2,7 +2,8 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', '1');
 require 'vendor/autoload.php';
-use Salaros/Vtiger/VTWSCLib/WSClient;
+//use Salaros/Vtiger/VTWSCLib/WSClient;
+use Faker;
 //require_once('include/database/PearDatabase.php');
 
 class Sync_List_View extends Vtiger_Index_View {
