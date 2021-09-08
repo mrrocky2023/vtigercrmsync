@@ -1,10 +1,9 @@
 <?php
-//error_reporting(E_ALL);
+//error_reporting(E_ALL & ~E_NOTICE);
 //ini_set('display_errors', '1');
 require 'vendor/autoload.php';
 //require_once('include/database/PearDatabase.php');
-use Salaros\Vtiger\VTWSCLib\WSClient;
-$client = new WSClient('http://192.168.99.102/_vtigercrm_2021/', 'superadmin', 'MFaeyxCMTmRrUZiE');
+use Javanile\VtigerClient\VtigerClient;
 
 class Sync_List_View extends Vtiger_Index_View {
 	public function process(Vtiger_Request $request) {
@@ -12,30 +11,21 @@ class Sync_List_View extends Vtiger_Index_View {
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			switch ($_POST['form']) {
 				case "A":
-                    /*
-                    $Contact = this->client->entities->findOne('Contacts', [
-                        'firstname'             => 'HAYDEE',
-                        'lastname'              => 'VILLARREAL',
-                    ], [
-                        'id',
-                        'salutationtype',
-                        'firstname',
-                        'lastname',
-                        'email',
-                        'phone'
-                    ]);
-                    if (false !== $var) {
-                        print_r($var);
-                    } else {
-                        echo('John Smith\'s record doesn\'t exists!' . PHP_EOL);
+                    $client = new VtigerClient('http://192.168.99.102/_vtigercrm_2021/');
+                    $client->login('superadmin', 'MFaeyxCMTmRrUZiE');
+                    $entities = $client->query('SELECT id, cf_1489, cf_1491, contact_id, cf_2177, cf_2119, cf_2067, cf_2025, cf_2141, cf_2059, cf_2179, cf_2183, cf_2069, cf_2115, cf_2035, cf_2033, cf_1527, cf_1513, cf_2071, cf_1471, cf_1479, cf_1475, cf_2145, cf_2143, cf_1481, cf_2157, cf_1465, cf_1477, cf_1473, cf_2147, cf_1463, modifiedtime FROM SalesOrder WHERE modifiedtime >= \'2021-09-08 18:31:37\' ORDER BY modifiedtime DESC LIMIT 0, 100;');
+                    if (false !== $entities) {
+                        print "<pre>";
+                        print_r($entities);
+                        print "</pre>";
+                    } else {    
+                        $var = ('Entities doesn\'t exists!' . PHP_EOL);
                     }
-                    $var = $Contact[id];
-                    */
 					break;
 			}
 		} else {
-			#$var = 'Waiting for Sync!';
-            $var = '$Contact[id]';
+			$var = 'Waiting for Sync!';
+            #$var = '$Contact[id]';
 		}
 		/*
 		$records = array();
